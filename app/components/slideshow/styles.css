@@ -1,0 +1,40 @@
+.hero {
+  @apply relative m-0 w-screen h-screen;
+
+  .swiper-pagination {
+    @apply flex flex-col justify-center absolute inset-x-4 top-40 lg:top-52 z-10 space-y-2 lg:space-y-6 lg:left-16 lg:w-[35vw] lg:text-2xl text-[#031c38];
+    .swiper-pagination-bullet {
+      @apply block relative font-extralight leading-tight cursor-pointer pl-3 lg:pl-6;
+      &:before {
+        @apply absolute block bg-[#031c38] content-[''] left-0 w-1 lg:w-3 h-0 transition-all duration-200 ease-in;
+      }
+      &.swiper-pagination-bullet-active {
+        @apply tracking-[-0.016rem] font-normal;
+        &:before {
+          @apply h-full;
+        }
+      }
+    }
+  }
+
+  .swiper-slide {
+    @apply !flex flex-col justify-center relative;
+    img {
+      @apply absolute inset-0 object-cover object-center;
+    }
+    div {
+      @apply absolute inset-0 flex items-center text-center p-4 pt-[50vh] lg:p-12 lg:pl-[50vw] z-20;
+      h1 {
+        @apply font-bold text-3xl lg:text-5xl text-black;
+      }
+    }
+    &:before {
+      @apply bg-slate-200 bg-opacity-60 absolute content-[''] block w-screen h-screen inset-0 z-[1];
+    }
+  }
+
+
+  & + button {
+    @apply absolute flex w-8 h-8 lg:w-12 lg:h-12 top-24 lg:top-32 -ml-4 z-50 left-4 lg:left-16;
+  }  
+}

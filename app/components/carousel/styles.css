@@ -1,0 +1,23 @@
+.carousel {
+  .swiper-wrapper {
+    @apply flex items-center;
+  }
+  .swiper-slide {
+    div {
+      @apply flex flex-col items-center py-8 px-6 space-y-3 text-center transition-all;
+      figure {
+        @apply block m-0 p-0 relative w-20 h-20 mx-auto
+      } 
+    }
+  }
+  .swiper-slide-prev,
+  .swiper-slide-next {
+    div {
+      @apply transform scale-y-75;
+    }
+  }
+  .swiper-slide-prev {
+    @apply flex items-end
+  }
+
+}

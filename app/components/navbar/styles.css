@@ -1,0 +1,79 @@
+header {
+  background: rgb(250,250,250);
+  background: linear-gradient(180deg, rgba(250,250,250,1) 25%, rgba(250,250,250,0) 100%);
+  @apply fixed inset-x-0 top-0 flex items-center justify-center h-20 lg:h-28 z-10;
+  a {
+    @apply block w-2/5 lg:w-64;
+    img {
+      @apply block w-full h-auto;
+    }
+  }
+
+}
+
+aside {
+  @apply relative z-20;
+  div {
+    @apply bg-[#051b38] absolute w-screen h-screen inset-0 pointer-events-none opacity-0 transition-opacity;
+  }
+  nav {
+    @apply bg-[#051b38] fixed flex flex-col h-screen inset-y-0 right-0 transition-all w-9/12 lg:w-4/12 pt-24 pl-12 pr-6 translate-x-full;
+    a, span {
+      display: block;
+      color: #fafafa;
+      margin: 9px;
+    }
+    span {
+      @apply opacity-40 cursor-default;
+    }
+  }
+
+  &.isOpen {
+    nav {
+      @apply shadow-lg translate-x-0;
+    }
+    div {
+      @apply opacity-50 pointer-events-auto;
+    }
+  }
+}
+
+.drawerToggle {
+  @apply fixed bg-transparent border-none flex items-center p-0 w-8 h-8 top-10 lg:top-14 -mt-4 right-6 lg:right-12 z-30;
+  .iconClose,
+  .iconMenu {
+    @apply flex items-center inset-0 w-8 h-8;
+  }
+
+  .iconMenu {
+    height: 3px;
+  }
+
+  .iconMenu,
+  .iconMenu:before,
+  .iconMenu:after {
+    background-color: #051b38;
+  }
+
+  .iconClose:before,
+  .iconClose:after {
+    background-color: #fafafa;
+  }
+
+  .iconClose:before,
+  .iconClose:after,
+  .iconMenu:before,
+  .iconMenu:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 32px;
+    position: absolute;
+  }
+
+  .iconClose:before { transform: rotate(45deg); }
+  .iconClose:after {  transform: rotate(-45deg); }
+
+  .iconMenu:before {  transform: translateY(-9px); }
+  .iconMenu:after { transform: translateY(9px); }
+}

@@ -1,0 +1,49 @@
+.accordion-item {
+
+  .accordion-title {
+    @apply flex items-center cursor-pointer;
+    p {
+      @apply font-medium m-0;
+    }
+    span {
+      @apply flex items-center justify-center mr-3 w-4 h-4 relative;
+      &:before,
+      &:after {
+        display: block;
+        content: '';
+        background-color: #fafafa;
+        position: absolute;
+        
+      } 
+      &:before {
+        height: 2px;
+        width: 100%;
+      }
+      &:after {
+        height: 100%;
+        width: 2px;
+        transition: height 0.2s ease-in;
+      }
+    }  
+  }
+
+  .accordion-content {
+    padding-left: 28px;
+  }
+  
+  &.item-active {
+    .accordion-title {
+      margin-bottom: 6px;
+      span {
+        &:after {
+          height: 2px
+        }
+      }
+    }
+  }
+  
+  
+  & + &{
+    margin-top: 16px;
+  }  
+}

@@ -1,0 +1,75 @@
+.flipCard,
+.flipCardNegative {
+  background-color: transparent;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+.flipCard:before,
+.flipCardNegative:before {
+  content: '';
+  display: block;
+  padding-top: 120%;
+  width: 100%;
+}
+
+/* This container is needed to position the front and back side */
+.flipCardInner {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flipCard:hover .flipCardInner,
+.flipCardNegative:hover .flipCardInner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flipCardFront, .flipCardBack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flipCardFront {
+  background-color: #ffffff;
+  color: #051b38;
+  padding: 1.5vw;
+}
+
+.flipCardFront img {
+  width: 50%;
+}
+
+.flipCardFront p {
+  font-weight: 700;
+}
+
+.flipCardBack {
+  background-color: #e1f5fe;
+  color: #051b38;
+  padding: 1.5vw;
+  transform: rotateY(180deg);
+}
+
+.flipCardNegative .flipCardFront {
+  background-color: #051b38;
+  color: #fafafa;
+}
+
+.flipCardNegative .flipCardBack {
+  background-color: #ffffff;
+  color: #051b38;
+}

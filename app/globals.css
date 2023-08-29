@@ -24,4 +24,53 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    @apply lg:text-xl;
+}
+
+h2 {
+  @apply font-bold leading-tight text-xl;
+}
+p {
+  @apply leading-tight;
+}
+
+ol {
+  @apply list-decimal pl-5 space-y-4;
+  ol {
+    @apply mt-4
+  }
+}
+
+form {
+
+  input, textarea {
+    @apply flex rounded-md px-3 text-black font-normal w-full focus:outline-none;
+  }
+  
+  input {
+    @apply py-0 h-9;
+  }
+  
+  textarea {
+    @apply py-2 h-44;
+  }
+  
+  button {
+    box-shadow: inset 0px 1px 0px 0px #073a67;
+    background:linear-gradient(to bottom, #094a85 5%, #05294a 100%);
+    background-color:#094a85;
+    @apply rounded-md border border-[#073a67] text-white flex items-center justify-center h-9 w-full;
+  }
+  
+}
+
+.bg-image {
+  @apply bg-no-repeat bg-cover bg-center bg-fixed;
+  &:before {
+    @apply bg-[#031c38] block absolute content-[''] w-full h-full inset-0 opacity-70;
+  }
+}
+
+.bg-aviso {
+  background-image: url('/images/aviso-de-privacidad.jpg');
 }

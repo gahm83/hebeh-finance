@@ -1,0 +1,7 @@
+.ornament {
+  background-image: url('/images/icon-ceil.svg'), url('/images/icon-floor.svg');
+  background-repeat: no-repeat;
+  background-size: 50vw;
+  background-position: 5% -12%, 95% 112%;
+  @apply absolute grid grid-cols-2 w-full h-full;
+}
