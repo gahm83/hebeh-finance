@@ -13,7 +13,7 @@ const Navbar = () => {
         <Link
           href="/"
           onClick={() => drawerToggle(false)}>
-          <Image src="/images/hebeh.svg" width="0" height="0" />
+          <Image src="/images/hebeh.svg" width="0" height="0" alt="Hebeh Financials Logo"/>
         </Link>
       </header>
       <aside className={classNames({ 'isOpen': isOpen })}>

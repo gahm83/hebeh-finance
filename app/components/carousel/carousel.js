@@ -23,7 +23,7 @@ const Carousel = (props) => {
       className="swiper carousel">
       {
         slideItems.map(item =>
-          <SwiperSlide>
+          <SwiperSlide key={item.title}>
             <div className={cardClassname}>
               <figure>
                 <Image src={iconSrc} fill />

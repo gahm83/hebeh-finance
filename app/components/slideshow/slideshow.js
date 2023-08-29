@@ -52,31 +52,31 @@ const SlideShow = () => {
         className="swiper hero"
         ref={swiperRef}>
         <SwiperSlide>
-          <Image src="/images/1-paga-tus-deudas.jpg" fill />
+          <Image src="/images/1-paga-tus-deudas.jpg" alt="Te ayudamos a pagar las deudas que actualmente tienes en tus Tarjetas de Crédito" fill />
           <div>
             <h1>Te ayudamos a pagar las deudas que actualmente tienes en tus Tarjetas de Crédito</h1>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <Image src="/images/2-mejora-tu-calificacion-en-buro.jpg" fill />
+          <Image src="/images/2-mejora-tu-calificacion-en-buro.jpg" alt="¿Te interesa mejorar tu calificación en Buro de Crédito?" fill />
           <div>
             <h1>¿Te interesa mejorar tu calificación en Buro de Crédito?</h1>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <Image src="/images/3-sabemos-que-preocupa-deber-tu-tarjeta.jpg" fill />
+          <Image src="/images/3-sabemos-que-preocupa-deber-tu-tarjeta.jpg" alt="Sabemos lo preocupante que es deber tú tarjeta de Crédito" fill />
           <div>
             <h1>Sabemos lo preocupante que es deber tú tarjeta de Crédito</h1>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <Image src="/images/4-olvidate-de-los-pagos-minimos.jpg" fill />
+          <Image src="/images/4-olvidate-de-los-pagos-minimos.jpg" alt="Olvídate de los Pagos mínimos en tu tarjeta de crédito" fill />
           <div>
             <h1>Olvídate de los Pagos mínimos en tu tarjeta de crédito</h1>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <Image src="/images/5-liquida tu deuda.jpg" fill />
+          <Image src="/images/5-liquida tu deuda.jpg" alt="Liquida tu deuda en un plan de pagos fijos" fill />
           <div>
             <h1>Liquida tu deuda en un plan de pagos fijos</h1>
           </div>

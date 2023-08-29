@@ -17,7 +17,7 @@ export default function NuestraEmpresa() {
     },
   ]
   return (
-    <section className="bg-image bg-aviso relative min-h-screen">
+    <section className="bg-image bg-nuestra-empresa relative min-h-screen">
       <div className="relative pt-28 lg:pt-40">
         <h1 className="text-3xl lg:text-5xl font-bold text-center mb-8 lg:mb-16">Nuestra empresa</h1>
         <div className="grid lg:grid-cols-2 gap-4 lg:gap-0">

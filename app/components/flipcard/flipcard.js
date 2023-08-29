@@ -9,7 +9,7 @@ const FlipCard = (props) => {
       <div className="flipCardInner">
         <div className="flipCardFront space-y-5">
           <span className="block relative w-24 h-24">
-            <Image src={`/images/${invertColors ? 'icono-hebeh-bco.svg' : 'icono-hebeh.svg'}`} fill/>
+            <Image src={`/images/${invertColors ? 'icono-hebeh-bco.svg' : 'icono-hebeh.svg'}`} fill alt="Hebeh icon for cards"/>
           </span>
           <p>{props.title}</p>
         </div>

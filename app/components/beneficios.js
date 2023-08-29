@@ -57,7 +57,7 @@ export default function Beneficios() {
           ? <Carousel slideItems={beneficiosA} />
           : <div className="grid grid-cols-4 gap-10 mx-auto w-[80%]">
             {
-              beneficiosA.map(item => <FlipCard title={item.title} content={item.content} />)
+              beneficiosA.map(item => <FlipCard key={item.title} title={item.title} content={item.content} />)
             }
           </div>
         }
@@ -68,7 +68,7 @@ export default function Beneficios() {
           ? <Carousel slideItems={beneficiosB} invertColors={true} />
           : <div className="grid grid-cols-4 gap-10 mx-auto w-[80%]">
             {
-              beneficiosB.map(item => <FlipCard title={item.title} content={item.content} invertColors={true}/>)
+              beneficiosB.map(item => <FlipCard key={item.title} title={item.title} content={item.content} invertColors={true}/>)
             }
           </div>
         }

@@ -56,9 +56,8 @@ export default function PoliticasPrivacidad() {
   return (
     <section className="bg-[#051b38]">
       <div className="flex flex-col lg:flex-row min-h-screen">
-      {/* <div className="grid grid-cols-2 min-h-screen"> pl-24 pr-8 pb-12  */}
         <div className="relative flex pt-48 pb-16 px-8">
-          <Image src="/images/contacto.jpg" fill className="absolute object-cover" />
+          <Image src="/images/contacto.jpg" fill className="absolute object-cover" alt="Torre Mitihak en la Ciudad de México" />
           <div className="relative lg:flex lg:flex-col lg:justify-end">
             <h2 className="text-xl lg:text-2xl font-bold leading-none mb-3">Ubicación</h2>
             <p>Cto. Interior Av. Rio Churubusco 601, Xoco, Benito Juárez, Ciudad de México.</p>

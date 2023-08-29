@@ -152,7 +152,7 @@ export default function Simulador() {
                 (planDePagos && planDePagos.length !== 0) &&
                 <div className="flex flex-col mt-3">
                 {
-                  planDePagos.map(item => <span>{item.mensualidades}</span>)
+                  planDePagos.map(item => <span key={item.mensualidades}>{item.mensualidades}</span>)
                 }
                 </div>
               }
@@ -163,7 +163,7 @@ export default function Simulador() {
                 (planDePagos && planDePagos.length !== 0) &&
                 <div className="flex flex-col mt-3">
                 {
-                  planDePagos.map(item => <span>$ {item.cuota}</span>)
+                  planDePagos.map(item => <span key={item.mensualidades}>$ {item.cuota}</span>)
                 }
                 </div>
               }
