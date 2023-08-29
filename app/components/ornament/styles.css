@@ -1,15 +1,15 @@
 .ornament {
   background-image: url('/images/icon-ceil.svg'), url('/images/icon-floor.svg');
+  background-position: top -5% left 5%, bottom -5% right 5%;
   background-repeat: no-repeat;
   background-size: 50vw;
   @apply absolute grid grid-cols-2 w-full h-full;
-  &.large {
-    background-position: 5% -12%, 95% 112%;
-  }
-  &.small {
-    background-position: 5% -6vw, 95% 12vw;
-  }
-  &.tiny {
-    background-position: 5% -6vw, 95% 6vw;
+  @screen lg {
+    &.small {
+      background-position: 5% -6vw, 95% 12vw;
+    }
+    &.tiny {
+      background-position: 5% -6vw, 95% 6vw;
+    }
   }
 }

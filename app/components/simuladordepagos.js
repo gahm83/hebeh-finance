@@ -62,7 +62,7 @@ export default function Simulador() {
       const pagoTotal = adeudoValue + (adeudoValue * (item[1] / 100));
       console.log(item[1], pagoTotal);
       const pagoMensual = pagoTotal / mensualidades;
-      const cuota = new Intl.NumberFormat('es-MX', {maximumFractionDigits: 2}).format(pagoMensual);
+      const cuota = new Intl.NumberFormat('es-MX', {minimumFractionDigits: 2, maximumFractionDigits: 2}).format(pagoMensual);
       return { mensualidades, cuota }
     });
 
@@ -137,7 +137,7 @@ export default function Simulador() {
         onSubmit={handleSubmit(onSubmit)}>
         <div className="grid grid-cols-12 lg:flex lg:items-center lg:justify-center gap-y-3">
           <label className="col-span-12 text-center lg:mr-3" htmlFor="adeudo">Total del adeudo en TDC:</label>
-          <div className="col-span-8">
+          <div className="col-span-8 lg:w-56">
             <input className="rounded-r-none text-black" {...register("adeudo")} />
           </div>
           <div className="col-span-4">

@@ -1,5 +1,6 @@
 import { Montserrat } from 'next/font/google';
 import Navbar from './components/navbar/navbar';
+import WhatsappButton from './components/whastapp';
 import './globals.css';
 
 const montserrat = Montserrat({
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
       <body className={`bg-[#051b38] ${montserrat.className}`}>
         <Navbar />
         {children}
+        <WhatsappButton />
       </body>
     </html>
   )
