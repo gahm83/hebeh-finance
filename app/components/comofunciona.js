@@ -34,7 +34,7 @@ export default function ComoFunciona() {
   return (
     <section className="relative lg:grid lg:grid-cols-2 lg:min-h-screen overflow-hidden">
       <Image src="/images/como-funcionan-nuestros-servicios.jpg" fill className="absolute z-0" alt={`alt`} />
-      <Ornament />
+      <Ornament className="large mix-blend-multiply"/>
       <div className="bg-[#051b38] bg-opacity-70 relative flex flex-col justify-between col-start-2 py-12 lg:pt-40 lg:pb-24 px-6 lg:px-12">
         <div className="text-white space-y-4">
           <h1 className="text-3xl lg:text-5xl font-bold text-center lg:text-left mb-4 lg:mb-8">¿Cómo funciona nuestro servicio?</h1>

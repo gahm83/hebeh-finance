@@ -3,9 +3,9 @@ import Image from "next/image"
 import './styles.css'
 
 export default function Ornament(props) {
-  const { classes } = props 
+  const { className } = props 
   return (
-    <div className={classNames("ornament", classes)}>
+    <div className={classNames("ornament", className)}>
       <div></div>
       <div></div>
     </div>

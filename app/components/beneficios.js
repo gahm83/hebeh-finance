@@ -49,20 +49,24 @@ export default function Beneficios() {
   console.log();
   return (
     <section>
-        {/* <Ornament classes="mix-blend-multiply opacity-80"/> */}
-      <div className="bg-[#051b38] pt-12 pb-8 lg:pt-40 lg:pb-24 overflow-hidden relative">
-        <h1 className="text-3xl lg:text-5xl font-bold text-center uppercase mb-8 lg:mb-16">Beneficios</h1>
-        {
-          isMobile
-          ? <Carousel slideItems={beneficiosA} />
-          : <div className="grid grid-cols-4 gap-10 mx-auto w-[80%]">
-            {
-              beneficiosA.map(item => <FlipCard key={item.title} title={item.title} content={item.content} />)
-            }
-          </div>
-        }
+      <div className="bg-[#051b38] overflow-hidden relative">
+        <Ornament className="small opacity-50" />
+        <div className="relative pt-12 pb-8 lg:pt-40 lg:pb-40 filter">
+          <h1 className="text-3xl lg:text-5xl font-bold text-center uppercase mb-8 lg:mb-16">Beneficios</h1>
+          {
+            isMobile
+            ? <Carousel slideItems={beneficiosA} />
+            : <div className="grid grid-cols-4 gap-10 mx-auto w-[80%]">
+              {
+                beneficiosA.map(item => <FlipCard key={item.title} title={item.title} content={item.content} />)
+              }
+            </div>
+          }
+        </div>
       </div>
-      <div className="bg-zinc-100 pt-8 pb-12 lg:pt-24 lg:pb-32 overflow-hidden relative">
+      <div className="bg-zinc-100 overflow-hidden relative">
+        <Ornament className="tiny mix-blend-multiply" />
+        <div className="relative pt-8 pb-12 lg:py-40">
         {
           isMobile
           ? <Carousel slideItems={beneficiosB} invertColors={true} />
@@ -72,6 +76,7 @@ export default function Beneficios() {
             }
           </div>
         }
+        </div>
       </div>
     </section>
   )
