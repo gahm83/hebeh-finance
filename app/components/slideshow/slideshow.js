@@ -30,7 +30,6 @@ const SlideShow = () => {
   };
   
   const togglePlay = () => {
-    // console.log(swiperRef?.current?.swiper)
     const isRunning = swiperRef?.current?.swiper?.autoplay?.running;
     setSwiperState(!isRunning)
     isRunning

@@ -6,7 +6,7 @@ import './styles.css';
 const Accordion = (props) => {
 
   const [ activeItem, setActiveItem] = useState(-1)
-  const { accordionItems } = props;
+  const { accordionItems, invertColors } = props;
   
   return (
     <div>
@@ -17,6 +17,7 @@ const Accordion = (props) => {
             accordionItem={item}
             accordionIndex={idx}
             isActive={activeItem === idx}
+            invertColors={invertColors}
             setActiveItem={setActiveItem}
           />)
       }

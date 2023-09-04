@@ -1,12 +1,14 @@
 'use client'
 import Ornament from "./ornament/ornament";
 import FlipCard from "./flipcard/flipcard";
+import Card from "./card";
 import Carousel from "./carousel/carousel";
 import useMediaQuery from "../hooks/useMediaQuery";
 
 export default function Beneficios() {
 
   const isMobile = useMediaQuery(768);
+  const isTablet = useMediaQuery(1024);
 
   const beneficiosA = [
     {
@@ -45,22 +47,26 @@ export default function Beneficios() {
     }
   ];
 
-  
-  console.log();
   return (
     <section>
       <div className="bg-[#051b38] overflow-hidden relative">
         <Ornament className="small opacity-50" />
         <div className="relative pt-12 pb-8 lg:pt-40 lg:pb-40 filter">
-          <h1 className="text-3xl lg:text-5xl font-bold text-center uppercase mb-8 lg:mb-16">Beneficios</h1>
+          <h1 className="text-3xl lg:text-5xl font-bold text-center text-white uppercase mb-8 lg:mb-16">Beneficios</h1>
           {
             isMobile
             ? <Carousel slideItems={beneficiosA} />
-            : <div className="grid grid-cols-4 gap-10 mx-auto w-[80%]">
-              {
-                beneficiosA.map(item => <FlipCard key={item.title} title={item.title} content={item.content} />)
-              }
-            </div>
+            : isTablet
+              ? <div className="grid grid-cols-2 gap-10 mx-auto w-[80%]">
+                {
+                  beneficiosA.map(item => <Card key={item.title} title={item.title} content={item.content} />)
+                }
+                </div>
+              : <div className="grid grid-cols-4 gap-10 mx-auto w-[80%]">
+                {
+                  beneficiosA.map(item => <FlipCard key={item.title} title={item.title} content={item.content} />)
+                }
+              </div>
           }
         </div>
       </div>
@@ -70,11 +76,17 @@ export default function Beneficios() {
         {
           isMobile
           ? <Carousel slideItems={beneficiosB} invertColors={true} />
-          : <div className="grid grid-cols-4 gap-10 mx-auto w-[80%]">
-            {
-              beneficiosB.map(item => <FlipCard key={item.title} title={item.title} content={item.content} invertColors={true}/>)
-            }
-          </div>
+          : isTablet
+            ? <div className="grid grid-cols-2 gap-10 mx-auto w-[80%]">
+              {
+                beneficiosB.map(item => <Card key={item.title} title={item.title} content={item.content} invertColors={true}/>)
+              }
+              </div>
+            : <div className="grid grid-cols-4 gap-10 mx-auto w-[80%]">
+              {
+                beneficiosB.map(item => <FlipCard key={item.title} title={item.title} content={item.content} invertColors={true}/>)
+              }
+            </div>
         }
         </div>
       </div>

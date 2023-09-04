@@ -1,11 +1,14 @@
 .accordion-item {
 
   .accordion-title {
-    @apply flex items-center cursor-pointer;
-    p {
-      @apply font-medium m-0;
+    @apply flex items-center cursor-pointer mb-2;
+    svg {
+      @apply block w-6 h-6 absolute;
     }
-    span {
+    p {
+      @apply font-medium m-0 pl-7;
+    }
+    /* span {
       @apply flex items-center justify-center mr-3 w-4 h-4 relative;
       &:before,
       &:after {
@@ -24,26 +27,22 @@
         width: 2px;
         transition: height 0.2s ease-in;
       }
-    }  
+    }   */
   }
 
   .accordion-content {
-    padding-left: 28px;
+    @apply pl-8 max-h-0 overflow-hidden transition-all duration-300 ease-out space-y-4;
   }
+
   
   &.item-active {
-    .accordion-title {
-      margin-bottom: 6px;
-      span {
-        &:after {
-          height: 2px
-        }
-      }
+    .accordion-content{
+      @apply max-h-[200vh] ease-in;
     }
   }
   
-  
   & + &{
     margin-top: 16px;
-  }  
+  }
+
 }

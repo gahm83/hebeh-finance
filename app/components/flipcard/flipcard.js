@@ -2,8 +2,9 @@ import Image from 'next/image';
 import './styles.css'
 
 const FlipCard = (props) => {
-  console.log(props);
+  
   const { invertColors } = props;
+  
   return (
     <div className={invertColors ? "flipCardNegative" : "flipCard"}>
       <div className="flipCardInner">
@@ -19,6 +20,7 @@ const FlipCard = (props) => {
       </div>
     </div>
   )
+  
 }
 
 export default FlipCard;

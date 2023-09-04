@@ -16,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`bg-[#051b38] ${montserrat.className}`}>
+      <body className={montserrat.className}>
         <Navbar />
         {children}
         <WhatsappButton />

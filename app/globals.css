@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -14,30 +14,32 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-    @apply lg:text-xl;
+  /* color: rgb(var(--foreground-rgb)); */
+  @apply leading-tight lg:text-xl;
 }
 
 h2 {
-  @apply font-bold leading-tight text-xl;
-}
-p {
-  @apply leading-tight;
+  @apply font-bold text-xl leading-none;
 }
 
 ol {
+  counter-reset: item;
   @apply list-decimal pl-5 space-y-4;
   ol {
-    @apply mt-4
+    @apply mt-4 pl-0;
+    li {
+      @apply list-none relative pl-7;
+      list-style: none;
+      &::before {
+        content: counters(list-item, '.') ' ';
+        counter-increment: item;
+        position: absolute;
+        left: 0;
+      }
+    }
   }
 }
 
@@ -56,10 +58,17 @@ form {
   }
   
   button {
-    box-shadow: inset 0px 1px 0px 0px #073a67;
+    /* box-shadow: inset 0px 1px 0px 0px #073a67;
     background:linear-gradient(to bottom, #094a85 5%, #05294a 100%);
-    background-color:#094a85;
-    @apply rounded-md border border-[#073a67] text-white flex items-center justify-center h-9 w-full;
+    background-color:#094a85; */
+    @apply bg-gradient-to-t from-blue-950 to-blue-800 border border-blue-800 rounded-md text-white flex items-center justify-center h-9 w-full font-bold uppercase;
+  }
+
+  .button {
+    /* box-shadow: inset 0px 1px 0px 0px #073a67;
+    background:linear-gradient(to bottom, #094a85 5%, #05294a 100%);
+    background-color:#094a85; */
+    @apply bg-gradient-to-t from-orange-400 to-orange-600 border border-orange-400 rounded-r text-white flex items-center justify-center h-9 w-full font-semibold cursor-pointer;
   }
   
 }
@@ -78,3 +87,5 @@ form {
 .bg-nuestra-empresa {
   background-image: url('/images/nuestra-empresa.jpg');
 }
+
+

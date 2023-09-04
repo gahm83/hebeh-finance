@@ -32,13 +32,13 @@ export default function ComoFunciona() {
   ];
 
   return (
-    <section className="relative lg:grid lg:grid-cols-2 lg:min-h-screen overflow-hidden">
-      <Image src="/images/como-funcionan-nuestros-servicios.jpg" fill className="absolute z-0" alt={`alt`} />
+    <section className="relative bg-[#051b38] lg:bg-transparent lg:grid lg:grid-cols-2 lg:min-h-screen overflow-hidden">
+      <Image src="/images/como-funcionan-nuestros-servicios.jpg" fill className="!fixed h-screen inset-0 object-cover object-center opacity-30 z-0" alt={`alt`} />
       <Ornament className="large mix-blend-multiply"/>
-      <div className="bg-[#051b38] bg-opacity-70 relative flex flex-col justify-between col-start-2 py-12 lg:pt-40 lg:pb-24 px-6 lg:px-12">
+      <div className="lg:bg-[#051b38] bg-opacity-70 relative flex flex-col justify-between col-start-2 py-12 lg:pt-40 lg:pb-24 px-6 lg:px-12">
         <div className="text-white space-y-4">
           <h1 className="text-3xl lg:text-5xl font-bold text-center lg:text-left mb-4 lg:mb-8">¿Cómo funciona nuestro servicio?</h1>
-          <Accordion accordionItems={accordionData}/>
+          <Accordion accordionItems={accordionData} invertColors={true} />
           <p>Nuestro enfoque integral y personalizado nos permite ayudar a las personas a salir de la deuda de tarjetas de crédito de manera efectiva y con un plan a medida. Nos comprometemos a brindar un servicio de calidad, con transparencia y honestidad en cada etapa del proceso.</p>
         </div>
         <div className="flex justify-end mt-32">

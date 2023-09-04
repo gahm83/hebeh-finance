@@ -13,8 +13,6 @@ const useMediaQuery = (minWidth) => {
     return () => window.removeEventListener("resize", handleWindowSizeChange);
   }, []);
 
-  console.log(width)
-
   return width <= minWidth;
 };
 

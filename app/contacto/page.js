@@ -56,15 +56,15 @@ export default function PoliticasPrivacidad() {
   return (
     <section className="bg-[#051b38]">
       <div className="flex flex-col lg:flex-row min-h-screen">
-        <div className="relative flex pt-48 pb-16 px-8">
+        <div className="relative flex pt-48 pb-16 px-6">
           <Image src="/images/contacto.jpg" fill className="absolute object-cover" alt="Torre Mitihak en la Ciudad de México" />
-          <div className="relative lg:flex lg:flex-col lg:justify-end">
-            <h2 className="text-xl lg:text-2xl font-bold leading-none mb-3">Ubicación</h2>
+          <div className="relative text-white lg:flex lg:flex-col lg:justify-end">
+            <h2 className="mb-3">Ubicación</h2>
             <p>Cto. Interior Av. Rio Churubusco 601, Xoco, Benito Juárez, Ciudad de México.</p>
           </div>
         </div>
-        <div className="flex-grow flex flex-col justify-center px-8">
-          <h1 className="text-3xl lg:text-5xl font-bold mb-4 lg:mb-8">Contacto</h1>
+        <div className="flex-grow flex flex-col justify-center px-6">
+          <h1 className="text-white text-3xl lg:text-5xl font-bold mb-4 lg:mb-8">Contacto</h1>
           <form onSubmit={handleSubmit(onSubmit)}>
             <fieldset className="flex flex-col space-y-4">
               <div>
