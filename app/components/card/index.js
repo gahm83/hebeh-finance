@@ -13,7 +13,7 @@ const Card = (props) => {
   return (
     <div className={cardClassname}>
       <figure>
-        <Image src={iconSrc} fill />
+        <Image src={iconSrc} fill alt="Icono Hebeh"/>
       </figure>
       <h2>{props.title}</h2>
       <p>{props.content}</p>

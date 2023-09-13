@@ -15,10 +15,10 @@ export default function Beneficios() {
       title: 'Refinanciamos tu deuda, para que comiences de nuevo',
       content: 'Pagamos tu deuda ofreciéndote un plan de pagos fijos, para que comiences de nuevo'
     },
-    {
-      title: 'Sin cobro de comisión por apertura de crédito',
-      content: 'No solicitamos pagos iniciales, tampoco se cobra por el trámite que realizas'
-    },
+    // {
+    //   title: 'Sin cobro de comisión por apertura de crédito',
+    //   content: 'No solicitamos pagos iniciales, tampoco se cobra por el trámite que realizas'
+    // },
     {
       title: 'La deuda se liquida al final del plazo que se eligió',
       content: 'Liquida tu deuda en el plazo de tu elección en cómodos pagos fijos'
@@ -49,20 +49,20 @@ export default function Beneficios() {
 
   return (
     <section>
-      <div className="bg-[#051b38] overflow-hidden relative">
-        <Ornament className="small opacity-50" />
+      <div className="bg-[#273649] overflow-hidden relative">
+        <Ornament className="small opacity-25" />
         <div className="relative pt-12 pb-8 lg:pt-40 lg:pb-40 filter">
           <h1 className="text-3xl lg:text-5xl font-bold text-center text-white uppercase mb-8 lg:mb-16">Beneficios</h1>
           {
             isMobile
             ? <Carousel slideItems={beneficiosA} />
             : isTablet
-              ? <div className="grid grid-cols-2 gap-10 mx-auto w-[80%]">
+              ? <div className="grid grid-cols-2 gap-10 mx-auto w-10/12">
                 {
                   beneficiosA.map(item => <Card key={item.title} title={item.title} content={item.content} />)
                 }
                 </div>
-              : <div className="grid grid-cols-4 gap-10 mx-auto w-[80%]">
+              : <div className="grid grid-cols-3 gap-10 mx-auto w-7/12">
                 {
                   beneficiosA.map(item => <FlipCard key={item.title} title={item.title} content={item.content} />)
                 }
@@ -71,7 +71,7 @@ export default function Beneficios() {
         </div>
       </div>
       <div className="bg-zinc-100 overflow-hidden relative">
-        <Ornament className="tiny mix-blend-multiply" />
+        <Ornament className="tiny opacity-25" />
         <div className="relative pt-8 pb-12 lg:py-40">
         {
           isMobile

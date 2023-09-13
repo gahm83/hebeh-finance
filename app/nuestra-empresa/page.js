@@ -19,9 +19,9 @@ export default function NuestraEmpresa() {
   return (
     <section className="relative min-h-screen">
       <Image src="/images/nuestra-empresa.jpg" fill className="!fixed h-screen inset-0 object-cover object-center opacity-30 z-0" alt={`alt`} />
-      <div className="relative pt-28 lg:pt-40 pb-16 px-6">
+      <div className="relative pt-28 lg:pt-40 pb-16 px-6 lg:w-10/12 lg:mx-auto">
         <h1 className="text-3xl lg:text-5xl font-bold text-center mb-8 lg:mb-16">Nuestra empresa</h1>
-        <div className="grid lg:grid-cols-2 gap-4 lg:gap-0">
+        <div className="grid lg:grid-cols-2 gap-4">
           <div className="space-y-4">
             <p>HEBEH Financials esta comprometida en brindar soluciones financieras innovadoras y accesibles que satisfagan las necesidades de nuestros clientes de una manera ética y responsable, ayudándoles a alcanzar sus metas financieras. </p>
             <p>HEBEH Financials se enorgullece de ser un socio confiable para aquellos que buscan hacer crecer su capital de manera segura, gestionando los fondos de nuestros inversionistas con el mayor cuidado y transparencia.</p>

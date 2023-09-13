@@ -68,7 +68,7 @@ form {
     /* box-shadow: inset 0px 1px 0px 0px #073a67;
     background:linear-gradient(to bottom, #094a85 5%, #05294a 100%);
     background-color:#094a85; */
-    @apply bg-gradient-to-t from-orange-400 to-orange-600 border border-orange-400 rounded-r text-white flex items-center justify-center h-9 w-full font-semibold cursor-pointer;
+    @apply bg-gradient-to-t from-orange-600 to-orange-400 border border-orange-400 rounded-r text-white flex items-center justify-center h-9 w-full font-semibold cursor-pointer;
   }
   
 }

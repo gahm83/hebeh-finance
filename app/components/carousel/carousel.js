@@ -4,14 +4,12 @@ import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
+import Card from '../card';
 import './styles.css'
 
 const Carousel = (props) => {
 
   const { slideItems, invertColors } = props;
-
-  const cardClassname = invertColors ? 'bg-[#051b38] text-white' : 'bg-zinc-100 text-[#051b38]';
-  const iconSrc = `/images/${invertColors ? 'icono-hebeh-bco.svg' : 'icono-hebeh.svg'}`;
 
   return (
     <Swiper
@@ -24,13 +22,7 @@ const Carousel = (props) => {
       {
         slideItems.map(item =>
           <SwiperSlide key={item.title}>
-            <div className={cardClassname}>
-              <figure>
-                <Image src={iconSrc} fill />
-              </figure>
-              <h2>{item.title}</h2>
-              <p>{item.content}</p>
-            </div>
+            <Card key={item.title} title={item.title} content={item.content} invertColors={invertColors} />
           </SwiperSlide>
         )
       }

@@ -4,7 +4,7 @@ export default function PoliticasPrivacidad() {
   return (
     <section className="relative min-h-screen">
       <Image src="/images/aviso-de-privacidad.jpg" fill className="!fixed h-screen inset-0 object-cover object-center opacity-30 z-0" alt={`alt`} />
-      <div className="relative pt-28 lg:pt-40 pb-16 px-6">
+      <div className="relative pt-28 lg:pt-40 pb-16 px-6 lg:w-10/12 lg:mx-auto">
         <h1 className="text-3xl lg:text-5xl font-bold text-center mb-8 lg:mb-16">Aviso de Privacidad</h1>
         <div className="space-y-4">
           <p>HEBEH FINANCIALS entidad financiera, en cumplimiento con lo establecido en la Ley Federal de Protección de Datos Personales en Posesión de Particulares, da a conocer el presente Aviso de Privacidad en los siguientes términos:</p>
